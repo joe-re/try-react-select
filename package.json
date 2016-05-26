@@ -1,0 +1,27 @@
+{
+  "name": "try-react-select",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:sass && watchify index.js -t babelify -o bundle.js -v",
+    "build": "browserify index.js -t babelify -o bundle.js && npm run build:sass",
+    "build:sass": "node-sass index.scss -o ./  --include-path node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-select": "^1.0.0-beta13"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "node-sass": "^3.7.0"
+  }
+}
